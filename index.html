@@ -4,17 +4,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-            <button class="newdeck-btn" id="newdeck-btn">New deck</button>
+            <div class="header">
+                <button class="newdeck-btn" id="newdeck-btn">New deck</button>
+                <p id="remaining"></p>
+            </div>            
+
             <div class="field">
-                <span>Remaining cards:</span>
                 <h1 id="game-status">War!</h1>
-                <h2 id="computer"></h2>
+                <h2 id="computer">Computer: 0</h2>
 
                 <div class="card-field" id="card-field">
                     <div class="card"></div>
                     <div class="card"></div>
                 </div>
-                <h2 id="human"></h2>
+                <h2 id="human">Me: 0</h2>
             </div>            
             <button class="draw-btn" id="draw-btn">DRAW</button>
         
