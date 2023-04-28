@@ -21,5 +21,21 @@ function drawCard() {
             <img src=${data.cards[0].image} class="drawn-card" />`
             cardsContainer.children[1].innerHTML = `
             <img src=${data.cards[1].image} class="drawn-card" />`
+
+            document.getElementById("game-status").innerText = handleCard(data.cards[0], data.cards[1])
         })
+}
+
+function handleCard(compCard, meCard) {
+    const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
+    "10", "JACK", "QUEEN", "KING", "ACE"]
+
+    const compCardIndex = valueOptions.indexOf(compCard.value)    
+    const meCardIndex = valueOptions.indexOf(meCard.value)
+    
+    if(compCardIndex > meCardIndex) {
+        return "Computer is the winner"
+    } else if(compCardIndex < meCardIndex) {
+        return "You are the winner"
+    } else return "War!"
 }
